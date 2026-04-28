@@ -12,10 +12,10 @@ def roman_to_int(roman_string):
         'M': 1000
     }
     t = 0
-    l = len(roman_string)
-    for i in range(l):
+    lr = len(roman_string)
+    for i in range(lr):
         c = r.get(roman_string[i], 0)
-        if i + 1 < l and r.get(roman_string[i + 1], 0) > c:
+        if i + 1 < lr and r.get(roman_string[i + 1], 0) > c:
             t -= c
         else:
             t += c

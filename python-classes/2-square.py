@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-"""Module containing a Square class with size validation."""
+""" This module defines a Square class with private size attribute. """
+
+
 class Square:
+    """ This class represents an Square class with private size attribute. 
+        It validates the size attribute """
     def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

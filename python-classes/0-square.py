@@ -2,5 +2,5 @@
 """Module containing an empty Square class."""
 
 class Square:
-    """ Square Method"""
+    """ An empty Square class """
     pass

@@ -3,7 +3,7 @@
 
 
 class Square:
-    """This class represents a square with a private size attribute and area."""
+    """This class represents a square with a private size attribute."""
 
     def __init__(self, size=0):
         """Initialize a new Square instance with size validation.
@@ -24,4 +24,3 @@ class Square:
             int: The area of the square (size multiplied by size).
         """
         return self.__size * self.__size
-

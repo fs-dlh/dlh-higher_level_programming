@@ -3,9 +3,14 @@
 
 
 class Square:
-    """ This class represents an Square class with private size attribute. It validates the size attribute """
+    """ This class represents an Square class with private size attribute. """
+
 
     def __init__(self, size=0):
+        """__init__ method 
+        Args:
+            size (int): size parameter.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:

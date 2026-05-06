@@ -11,6 +11,8 @@ def print_triangle(triangle):
     for row in triangle:
         print("[{}]".format(",".join([str(x) for x in row])))
 
+    print ("Lenght: {}".format(len(triangle)))
+
 
 if __name__ == "__main__":
-    print_triangle(pascal_triangle(0))
+    print_triangle(pascal_triangle(100))

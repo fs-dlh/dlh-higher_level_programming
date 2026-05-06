@@ -20,4 +20,4 @@ def pascal_triangle(n):
 
     if n <= 0:
         return triangle[:1]
-    return triangle[:n+1]
+    return triangle[1:n+1]

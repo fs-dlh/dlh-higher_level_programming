@@ -1,24 +1,19 @@
-!/usr/bin/python3
-"""This module defines a Square class with size,
-   position validation area and printing.
-
-"""
+#!/usr/bin/python3
+"""This module defines Square class with size validation area and printing."""
 
 
 class Square:
-    """This class represents a square with private size
-       and position attributes.
-    """
+    """This class represents a square with private size and position attr."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new Square instance with size and position validation.
+        """Initialize a new Square instance with size validation.
 
         Args:
-            size (int): The size of the square. Defaults to 0.
+            size (int):       The size of the square. Defaults to 0.
             position (tuple): A tuple of 2 positive integers (x, y).
-            Defaults to (0, 0).
+                              Defaults to (0, 0).
         """
-        self.size = size
+        self.size = size  # Uses the setter for validation
         self.position = position
 
     @property
@@ -81,16 +76,12 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """Print the square using the '#' character with position offset.
+        """Print the square using the '#' character.
 
         If size is 0, prints an empty line.
-        Otherwise, prints top margin (position[1] empty lines) and each row
-        with left padding (position[0] spaces) followed by '#' repeated size.
         """
         if self.__size == 0:
             print()
-            return
-        for _ in range(self.__position[1]):
-            print()
-        for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)

@@ -13,9 +13,7 @@ def class_to_json(obj):
         obj: An instance of a class.
 
     Returns:
-        dict: A dictionary containing all serializable attributes of the
-              object, where keys are attribute names and values are the
-              attribute values that are of type list, dict, str, int, or bool.
+        dict: A dictionary containing all attributes of the object.
     """
     result = {}
     for key, value in obj.__dict__.items():

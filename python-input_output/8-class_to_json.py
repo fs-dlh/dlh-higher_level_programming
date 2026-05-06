@@ -18,7 +18,6 @@ def class_to_json(obj):
               attribute values that are of type list, dict, str, int, or bool.
     """
     result = {}
-    # Iterate over the object's __dict__ to get instance attributes
     for key, value in obj.__dict__.items():
         # Check if the value is one of the JSON-serializable types
         if type(value) in (list, dict, str, int, bool):

@@ -11,7 +11,7 @@ def serialize_and_save_to_file(data, filename):
     """
     Serialize the given data to JSON and save it to the specified file."""
 
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f)
 
 

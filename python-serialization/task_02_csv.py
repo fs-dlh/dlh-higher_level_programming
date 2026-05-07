@@ -16,11 +16,14 @@ def convert_csv_to_json(csv_file):
         csv_file (str): Name of the CSV file to be converted.
     """
     try:
-        with open(csv_file, 'r') as f:
+        with open(csv_file, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             data = list(reader)
 
-        with open('data.json', 'w') as json_file:
+        with open('data.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4)
+
+        return True
+        
     except Exception:
-        return None
+        return False

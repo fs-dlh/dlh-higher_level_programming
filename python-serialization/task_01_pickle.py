@@ -30,7 +30,7 @@ class CustomObject:
         """Serialize the object to a file using pickle."""
         import pickle
         try:
-            with open(filename, 'wb') as f:
+            with open(filename, 'wb', encoding='utf-8') as f:
                 pickle.dump(self, f)
         except Exception:
             return None
@@ -40,7 +40,7 @@ class CustomObject:
         """Deserialize an object from a file using pickle."""
         import pickle
         try:
-            with open(filename, 'rb') as f:
+            with open(filename, 'rb', encoding='utf-8') as f:
                 return pickle.load(f)
         except Exception:
             return None

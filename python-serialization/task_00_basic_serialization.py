@@ -20,5 +20,5 @@ def load_and_deserialize(filename):
     Load and deserialize data from the specified JSON file.
     """
 
-    with open(filename, 'r') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         return json.load(f)
